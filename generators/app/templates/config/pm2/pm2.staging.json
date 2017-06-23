@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "name": "<%= name %>",
+      "cwd" : "/root/sites/<%= name %>",
+      "script": "node",
+      "args": "server",
+      "instances": 1,
+      "exec_mode": "fork",
+      "error_file": "/root/.pm2/logs/<%= name %>-error.log",
+      "env": {
+        "NODE_ENV": "staging",
+        "PORT": "3150"
+      }
+    }
+  ]
+}
