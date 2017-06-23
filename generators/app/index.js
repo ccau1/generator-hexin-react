@@ -189,6 +189,11 @@ module.exports = class extends Generator {
       this.props
     );
     this.fs.copyTpl(
+      this.templatePath('package-lock.json'),
+      this.destinationPath('package-lock.json'),
+      this.props
+    );
+    this.fs.copyTpl(
       this.templatePath('package.json'),
       this.destinationPath('package.json'),
       this.props
