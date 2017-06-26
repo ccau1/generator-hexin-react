@@ -151,6 +151,15 @@ module.exports = class extends Generator {
         },
         {
           type    : 'input',
+          name    : 'port',
+          message : 'Your project port',
+          default : 3000,
+          validate: function(prop) {
+            return isNaN(prop) ? 'Invalid Port Number' : true;
+          }
+        },
+        {
+          type    : 'input',
           name    : 'name',
           message : 'Your back-end API uri base',
           default : 'http://localhost:8280/api/' // Default to current folder name

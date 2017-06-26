@@ -1,6 +1,6 @@
 {
   "name": "<%= name %> (D)",
-  "port": 3150,
+  "port": <%= port %>,
   "db": {
     "main": {
       "name": "main",
